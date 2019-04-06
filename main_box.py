@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello ()-> str:
-    return 'я трахал бабий рот!'
+    return 'всем привет!'
 
 @app.route('/search4')
 def do_search() ->str:
