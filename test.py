@@ -1,4 +1,5 @@
 from PIL import Image
+import sys
 
 import numpy as np
 
@@ -17,4 +18,15 @@ img.paste(img2,(0,0))
 
 img3 = img.crop((400,0, 1600, 1080*2))
 
-img3.show()
+
+#img1 = Image.open(sys.argv[1])
+width, height = img1.size
+m = -0.5
+xshift = abs(m) * width
+new_width = width + int(round(xshift))
+img4 = img.transform((new_width, height), Image.AFFINE,
+        (1, m, -xshift if m > 0 else 0, 0, 1, 0), Image.BICUBIC)
+#img.save(sys.argv[2]
+
+img4.show()
+
