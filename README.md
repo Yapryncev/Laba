@@ -1,2 +1,2 @@
 # Laba
-hello world
+Hello all
