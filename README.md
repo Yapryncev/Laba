@@ -1,2 +1,2 @@
-# Laba
-Hello all
+# IoT Lab
+Проект Умный холодильник
